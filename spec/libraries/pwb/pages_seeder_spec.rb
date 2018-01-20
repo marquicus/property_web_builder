@@ -14,10 +14,10 @@ module Pwb
 
     it 'sets sort order correctly' do
       about_us_page = Pwb::Page.find_by_slug "about-us"
-      our_agency_content_key =   "our_agency"
+      our_agency_content_key = "our_agency"
       our_agency_content = about_us_page.contents.find_by_page_part_key our_agency_content_key
       our_agency_join_model = our_agency_content.page_contents.find_by_page_id about_us_page.id
-      content_html_content_key =   "content_html"
+      content_html_content_key = "content_html"
       content_html_content = about_us_page.contents.find_by_page_part_key content_html_content_key
       content_html_join_model = content_html_content.page_contents.find_by_page_id about_us_page.id
 
@@ -43,6 +43,8 @@ module Pwb
       expect(about_us_page_content.content_photos.count).to eq(1)
     end
 
+
+
     it 'creates home html content' do
       home_page = Pwb::Page.find_by_slug "home"
       content_key = "landing_hero"
@@ -51,6 +53,5 @@ module Pwb
       expect(home_page_content.content_photos.count).to eq(1)
       # expect(home_page.details["fragments"]["landing_hero"]["en"]["blocks"].count).to eq(3)
     end
-
   end
 end

@@ -62,7 +62,7 @@
   is_external: false
   placement: :top_nav
   link_title_en: About Us
-  link_title_es: Sobre Nosotros
+  link_title_es: Nosotros
   link_title_fr: A propos
   link_title_de: Über uns
   link_title_ru: О нас
@@ -75,7 +75,7 @@
   is_external: false
   placement: :top_nav
   link_title_en: Contact Us
-  link_title_es: Contactar
+  link_title_es: Contacto
   link_title_fr: Contacter
   link_title_de: Kontact
   link_title_ru: связаться с нами
@@ -103,7 +103,7 @@
   is_external: false
   placement: :top_nav
   link_title_en: Privacy Policy
-  link_title_es: Politica de Privacidad
+  link_title_es: Aviso de Privacidad
   link_title_fr: Privacy Policy
   link_title_de: Datenschutz-Bestimmungen
   link_title_pt: Política de Privacidade
@@ -111,7 +111,7 @@
 - slug: top_nav_admin
   link_path: admin_with_locale_path
   sort_order: 9
-  visible: true
+  visible: false
   is_external: false
   placement: :top_nav
   link_title_en: Admin
@@ -154,7 +154,7 @@
   is_external: false
   placement: :footer
   link_title_en: Rent
-  link_title_es: Arrendar
+  link_title_es: Rentar
   link_title_fr: Louer
   link_title_de: Miete
   link_title_ru: Аренда
@@ -181,7 +181,7 @@
   is_external: false
   placement: :footer
   link_title_en: About Us
-  link_title_es: Sobre Nosotros
+  link_title_es: Nosotros
   link_title_fr: A propos
   link_title_de: Über uns
   link_title_ru: О нас
@@ -194,7 +194,7 @@
   is_external: false
   placement: :footer
   link_title_en: Contact Us
-  link_title_es: Contactar
+  link_title_es: Contacto
   link_title_fr: Contacter
   link_title_de: Kontact
   link_title_ru: связаться с нами
@@ -204,7 +204,7 @@
   link_path: show_page_path
   link_path_params: legal
   sort_order: 7
-  visible: true
+  visible: false
   is_external: false
   placement: :footer
   link_title_en: Legal Notice
@@ -222,7 +222,7 @@
   is_external: false
   placement: :footer
   link_title_en: Privacy Policy
-  link_title_es: Politica de Privacidad
+  link_title_es: Aviso de Privacidad
   link_title_fr: Privacy Policy
   link_title_de: Datenschutz-Bestimmungen
   link_title_pt: Política de Privacidade
@@ -252,7 +252,7 @@
 #   link_title_fr: Facebook
 #   link_title_de: Facebook 
 - slug: social_media_facebook
-  link_url: "https://www.facebook.com/propertywebbuilder"
+  link_url: "https://www.facebook.com/ci24siete/"
   sort_order: 1
   visible: true
   icon_class: "fa-facebook fa"
@@ -264,7 +264,7 @@
   link_title_fr: Facebook
   link_title_de: Facebook 
 - slug: social_media_twitter
-  link_url: "https://twitter.com/prptywebbuilder"
+  link_url: "http://twitter.com/ci24siete"
   sort_order: 1
   visible: true
   icon_class: "fa-twitter fa"
@@ -338,7 +338,7 @@
   is_external: false
   placement: :admin
   link_title_en: About Us
-  link_title_es: Sobre Nosotros
+  link_title_es: Nosotros
   link_title_fr: A propos
   link_title_de: Über uns
   link_title_ru: О нас
@@ -351,7 +351,7 @@
   is_external: false
   placement: :admin
   link_title_en: Contact Us
-  link_title_es: Contactar
+  link_title_es: Contacto
   link_title_fr: Contacter
   link_title_de: Kontact
   link_title_ru: связаться с нами
@@ -379,7 +379,7 @@
   is_external: false
   placement: :admin
   link_title_en: Privacy Policy
-  link_title_es: Politica de Privacidad
+  link_title_es: Aviso de Privacidad
   link_title_fr: Privacy Policy
   link_title_de: Datenschutz-Bestimmungen
   link_title_pt: Política de Privacidade

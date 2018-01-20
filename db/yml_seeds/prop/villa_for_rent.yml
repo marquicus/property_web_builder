@@ -11,7 +11,7 @@
   reserved:
   highlighted: false
   archived: false
-  visible: true
+  visible: false
   for_rent_short_term: true
   for_rent_long_term: true
   for_sale: false

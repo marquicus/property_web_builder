@@ -11,22 +11,22 @@ es:
   contactUs: Contacta con nosotros
   contactUsPrompt: Rellena el siguiente formulario para contactar con nosotros
   devise:
-    user_update_success: You have successfully updated your account.
-    user_update_success_title: Congratulations
+    user_update_success: Ha actualizado correctamente su cuenta
+    user_update_success_title: Felicidades
   editarPropiedad: Editar un inmueble
   email: Email
   'false': 'No'
   findAProperty: Encuentra tu casa
   findByReference: Buscar por referencia
-  forRent: En arriendo
+  forRent: En renta
   forSale: En venta
   go: Ir
   labels:
     create: Crear
     edit: Editar
-    latestProperties: Latest properties
+    latestProperties: Ultimas propiedades
     new: Nuevo
-    ourServices: Our services
+    ourServices: Nuestros servicios
     save: Guardar
   leaveBlank: dejar en blanco si no desea cambiarlo
   legalAdvice: Aviso Legal
@@ -53,11 +53,11 @@ es:
     aboutUs: Sobre nosotros
     admin: Admin
     buy: Comprar
-    contactUs: Contactar
+    contactUs: Contacto
     home: Inicio
     legalAdvice: Aviso Legal
-    privacyPolicy: Politica de Privacidad
-    rent: Arrendar
+    privacyPolicy: Aviso de Privacidad
+    rent: Rentar
     sell: Vender
   needCurrentPwd: necesitamos su contraseña actual para confirmar los cambios
   newPassword: Nuevo Contraseña
@@ -72,7 +72,7 @@ es:
     name: Tu nombre
     subject: Asunto
     tel: Fijo o móvil
-  privacyPolicy: Politica de Privacidad
+  privacyPolicy: Aviso de Privacidad
   property:
     description: Descripción
     details: Características
@@ -88,8 +88,8 @@ es:
     operationType: Tipo de Operación
     price: Precio
     propertyType: Tipo de Propiedad
-    ref: Ref.
-  propertyForRent: Inmueble para arrendar
+    ref: Referencia
+  propertyForRent: Inmueble en renta
   propertyForSale: Inmueble a la venta
   propertyNotFound: Propiedad no encontrada
   pwb:

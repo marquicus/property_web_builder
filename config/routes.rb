@@ -27,18 +27,32 @@ Pwb::Engine.routes.draw do
       get "/admin-1" => "admin_panel#show_legacy_1", as: "admin_with_locale_legacy"
       get "/admin-1/*path" => "admin_panel#show_legacy_1"
     end
+    get '/config' => 'config#show'
+    get '/config/:params' => 'config#show'
 
   end
 
   get "/custom_css/:theme_name" => "css#custom_css", as: "custom_css"
+
+
+  # We need to define devise_for just omniauth_callbacks:auth_callbacks otherwise it does not work with scoped locales
+  # see https://github.com/plataformatec/devise/issues/2813 &
+  # https://github.com/plataformatec/devise/wiki/How-To:-OmniAuth-inside-localized-scope
+  devise_for :users, class_name: "Pwb::User", only: :omniauth_callbacks, controllers: { omniauth_callbacks: 'pwb/devise/omniauth_callbacks' }
+
 
   scope "(:locale)", locale: /#{I18n.available_locales.join("|")}/ do
 
     devise_scope :user do
       get "/users/edit_success" => "devise/registrations#edit_success", as: "user_edit_success"
     end
+
+    # We define here a route inside the locale thats just saves the current locale in the session
+    get 'omniauth/:provider' => 'omniauth#localized', as: :localized_omniauth
+
+
     # https://github.com/plataformatec/devise/wiki/How-To:-Use-devise-inside-a-mountable-engine
-    devise_for :users, class_name: "Pwb::User", module: :devise, :controllers => { :registrations => "pwb/devise/registrations" }
+    devise_for :users, skip: :omniauth_callbacks, class_name: "Pwb::User", module: :devise, :controllers => { :registrations => "pwb/devise/registrations", omniauth_callbacks: 'pwb/devise/omniauth_callbacks' }
     # specifying controllers above is from:
     # https://github.com/plataformatec/devise/wiki/How-To:-Customize-the-redirect-after-a-user-edits-their-profile
 
@@ -69,9 +83,10 @@ Pwb::Engine.routes.draw do
 
   end
 
-  namespace :api_public do
+  namespace :api_ext do
     namespace :v1 do
-      # jsonapi_resources :props
+      jsonapi_resources :props
+      post '/properties/create_with_token' => 'props#create_with_token'
       # post '/properties/bulk_create_with_token' => 'props#bulk_create_with_token'
     end
   end
@@ -122,7 +137,7 @@ Pwb::Engine.routes.draw do
         put "/pages" => "page#update"
         put "/pages/page_part_visibility" => "page#update_page_part_visibility"
         put "/pages/page_fragment" => "page#save_page_fragment"
-        get "/pages/:page_name" => "page#get"
+        get "/pages/:page_name" => "page#show"
 
         # post '/page_fragments/photos/:page_id/:block_label' => 'page_fragments#set_photo'
 
@@ -134,7 +149,7 @@ Pwb::Engine.routes.draw do
         get "/web-contents" => "agency#infos"
         jsonapi_resources :lite_properties
         jsonapi_resources :properties
-        jsonapi_resources :clients
+        # jsonapi_resources :clients
         jsonapi_resources :web_contents
         resources :contacts
 

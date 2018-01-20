@@ -1,6 +1,6 @@
 module Pwb
   class ApplicationMailer < ActionMailer::Base
-    default from: 'service@propertywebbuilder.com'
+    # default from: 'pwb@consultorinmobiliario.mx'
     layout 'mailer'
   end
 end

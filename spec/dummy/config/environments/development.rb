@@ -36,12 +36,12 @@ Rails.application.configure do
 
 
   config.action_mailer.smtp_settings = {
-    :address => "smtp.sendgrid.net",
-    :port => 25,
-    :domain => "propertywebbuilder.com",
-    :authentication => :plain,
-    :user_name => Rails.application.secrets.sendgrid_username,
-    :password => Rails.application.secrets.sendgrid_password
+    :address => "smtp.mailtrap.io",
+    :domain => "smtp.mailtrap.io",
+    :port => 2525,
+    :authentication => :cram_md5,
+    :user_name => "ab690bb6f741b2",
+    :password => "90432525dad621"
   }
   #  care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
