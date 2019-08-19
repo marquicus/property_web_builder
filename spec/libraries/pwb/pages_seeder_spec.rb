@@ -1,6 +1,5 @@
 require 'spec_helper'
 require 'pwb/pages_seeder'
-require 'pwb/contents_seeder'
 
 module Pwb
   RSpec.describe 'PagesSeeder' do
@@ -9,27 +8,16 @@ module Pwb
       Pwb::Seeder.seed!
       Pwb::PagesSeeder.seed_page_parts!
       Pwb::PagesSeeder.seed_page_basics!
-      Pwb::ContentsSeeder.seed_page_content_translations!
+      Pwb::PagesSeeder.seed_page_content_translations!
       # Pwb::PagesSeeder.seed_content_translations!
     end
 
-
-    it 'sets visibility correctly' do
-      home_page = Pwb::Page.find_by_slug "home"
-      rails_part_key = "search_cmpt"
-      # A rails part can be found in page_contents not contents:
-      search_cmpt_placeholder = home_page.page_contents.find_by_page_part_key rails_part_key
-
-      expect(search_cmpt_placeholder.visible_on_page).to eq(false)
-    end
-
-
     it 'sets sort order correctly' do
       about_us_page = Pwb::Page.find_by_slug "about-us"
-      our_agency_content_key = "our_agency"
+      our_agency_content_key =   "our_agency"
       our_agency_content = about_us_page.contents.find_by_page_part_key our_agency_content_key
       our_agency_join_model = our_agency_content.page_contents.find_by_page_id about_us_page.id
-      content_html_content_key = "content_html"
+      content_html_content_key =   "content_html"
       content_html_content = about_us_page.contents.find_by_page_part_key content_html_content_key
       content_html_join_model = content_html_content.page_contents.find_by_page_id about_us_page.id
 
@@ -51,9 +39,7 @@ module Pwb
       about_us_page = Pwb::Page.find_by_slug "about-us"
       content_key =   "our_agency"
       about_us_page_content = about_us_page.contents.find_by_page_part_key content_key
-
       expect(about_us_page_content.raw_en).to include("professional")
-      expect(about_us_page_content.raw_es).to include("Llevamos muchos años comprometidos")
       expect(about_us_page_content.content_photos.count).to eq(1)
     end
 
@@ -66,11 +52,5 @@ module Pwb
       # expect(home_page.details["fragments"]["landing_hero"]["en"]["blocks"].count).to eq(3)
     end
 
-    it 'creates website footer content' do
-      current_website = Pwb::Website.last
-      content_key = "footer_content_html"
-      footer_html_content = current_website.contents.find_by_page_part_key content_key
-      expect(footer_html_content.raw_en).to include("We are proud to be registered")
-    end
   end
 end

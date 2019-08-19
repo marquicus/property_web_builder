@@ -2,66 +2,66 @@
 pt:
   aboutUs: Sobre nós
   address: Endereço
-  back: Voltar
+  back: Costas
   changePassword: Mudar senha
   contact:
     emailSubject: Contate a partir de seu site
-    error: Desculpe-nos, ocorreu um erro.
+    error: Desculpe, ocorreu um erro.
     success: Obrigado pela sua mensagem. Entraremos em contato em breve!
   contactUs: Contato
-  contactUsPrompt: Preencha o seguinte formulário para entrar em contato connosco
+  contactUsPrompt: Preencha o seguinte formulário para entrar em contato conosco
   devise:
-    user_update_success: A sua conta foi atualizada com sucesso.
-    user_update_success_title: Parabéns
+    user_update_success: You have successfully updated your account.
+    user_update_success_title: Congratulations
   editarPropiedad: Editar uma propriedade
-  email: Email
+  email: O email
   'false': Não
-  findAProperty: Buscar um imóvel
-  findByReference: Buscar por referência
+  findAProperty: Encontrar um imóvel
+  findByReference: Procurar por referência
   forRent: Para alugar
-  forSale: Para vender
+  forSale: À venda
   go: Ir
   labels:
-    create: Criar
+    create: Crio
     edit: Editar
-    latestProperties: Últimas propriedades
+    latestProperties: Latest properties
     new: Novo
-    ourServices: Os nossos serviços
-    save: Salvar
-  leaveBlank: Deixe em branco se não pretender alterar
-  legalAdvice: Informação legal
+    ourServices: Our services
+    save: Salve
+  leaveBlank: deixe em branco se você não quer mudá-lo
+  legalAdvice: Notícia legal
   listadoPropiedades: Lista de propriedades
   mailers:
     confirm_registration: Por favor, confirme sua conta através do link abaixo
     from: A partir de
     general_enquiry_targeting_agency:
-      title: Inquérito geral do seu site
+      title: inquérito geral do seu site
     general_enquiry_targeting_enquirer:
       message_title: ''
       subject: ''
-    message: Mensagem
+    message: mensagem
     phone: Tel
     property: Propriedade
     property_enquiry_targeting_agency:
       title: Inquérito sobre uma propriedade
     received_on: recebido em
-    welcome: Bem-vindo
+    welcome: Bem vinda
   menu_admin: administrador
-  message: Mensagem
+  message: mensagem
   name: Nome
   navbar:
     aboutUs: Sobre nós
     admin: Admin
     buy: Comprar
     contactUs: Contato
-    home: Início
-    legalAdvice: Informação legal
+    home: Inicio
+    legalAdvice: Notícia legal
     privacyPolicy: Política de Privacidade
     rent: Aluguel
-    sell: Venda
-  needCurrentPwd: Insira a sua senha atual para confirmar as alterações
+    sell: Vender
+  needCurrentPwd: precisamos de sua senha atual para confirmar as alterações
   newPassword: Nova senha
-  noResultsForSearch: Desculpe, não foram encontrados resultados
+  noResultsForSearch: Desculpe, nenhum resultado encontrado
   nuevoPropiedad: nova propriedade
   orderBy:
     priceAscending: "↓ Preço (crescente)"
@@ -70,8 +70,8 @@ pt:
     email: Seu email
     message: Escreva sua mensagem aqui
     name: Seu nome
-    subject: Assunto
-    tel: Fixo ou móvel
+    subject: Sujeito
+    tel: Fixa ou móvel
   privacyPolicy: Política de Privacidade
   property:
     description: Descrição
@@ -79,12 +79,12 @@ pt:
     extras: Características
     furniture: Mobília
     goToProperty: Ver propriedade
-    highlightedProperty: propriedade destacada
+    highlightedProperty: propriedade excelente
     locality: Localidade
     map: Mapa
-    monthlyRentalPriceHighSeason: Preço Mensal (época alta)
-    monthlyRentalPriceLowSeason: Preço Mensal (época baixa)
-    monthlyRentalPriceStandardSeason: Preço Mensal (época normal)
+    monthlyRentalPriceHighSeason: Preço Mensal (alta temporada)
+    monthlyRentalPriceLowSeason: Preço Mensal (baixa temporada)
+    monthlyRentalPriceStandardSeason: Preço Mensal (Temporada padrão)
     operationType: Tipo de operação
     price: Preço
     propertyType: Tipo de Propriedade
@@ -94,28 +94,30 @@ pt:
   propertyNotFound: Propriedade não encontrada
   pwb:
     copyright: "%{company_name} Inc. Todos os direitos reservados."
-    createPrompt: Crie o seu site imobiliário
+    createPrompt: Crie seu site imobiliária
     createTagLine: Por favor, indique os detalhes da sua conta
     getStarted: Comece agora
-    registerNow: Registar agora
+    registerNow: Registrar agora
     tagLine: sites profissionais para agentes imobiliários em minutos
-    tagLineExt: Belos sites que têm que ver para crer. <br> Ninguém coloca o seu negócio online mais rápido.
-  requestPropertyInfo: Pedido de informações
-  search: Buscar
-  searchForProperties: Buscar propriedades
+    tagLineExt: Belas sites que têm que ser visto para ser acreditado. <br> Ninguém
+      coloca você online mais rápido.
+  requestPropertyInfo: informações Request
+  search: Pesquisa
+  searchForProperties: Busca de propriedades
   selectpicker:
     countSelectedText: Selecionado {0} de {1}
     noneResultsText: Nenhum resultado encontrado {0}
-    noneSelectedText: Nenhum selecionado
+    noneSelectedText: Nada selecionado
   send: Enviar
   setup:
-    claimSubdomain: Solicite este subdomínio
-    createdSuccessfully: O website foi criado com sucesso
-    goToYourSite: Ir para o seu site
+    claimSubdomain: Solicite esta url
+    createdSuccessfully: Site criado com sucesso
+    goToYourSite: Vá para o seu site
     loggedInAs: logado como
     logout: Sair
     selectUrl: Selecione um url
-    selectUrlMessage: Você criou com sucesso uma conta - Agora selecione a url para o seu novo site
+    selectUrlMessage: Você criou com sucesso uma conta - Agora selecione a url para
+      o seu novo site
     subdomain: subdomínio
     subdomainMissing: Por favor, indique um nome para o subdomínio
     thankYouForTrusting: Agradecemos a confiança depositada %{company_name}
@@ -128,7 +130,7 @@ pt:
       default_message: 'Reveja os problemas abaixo:'
     labels:
       search:
-        count_bathrooms: Banheiro (min)
+        count_bathrooms: Casas de banho (min)
         count_bedrooms: Quartos (min)
         for_rent_price_from: Alugar a partir de (Mensal)
         for_rent_price_till: Alugar Até (Mensal)
@@ -137,21 +139,21 @@ pt:
         in_locality: Localidade
         in_zone: Zona
         locality: Localidade
-        property_state: Estado da propriedade
+        property_state: propriedade do Estado
         property_type: Tipo de Propriedade
     'no': Não
     required:
       mark: "*"
-      text: requiridos
+      text: requeridos
     'yes': sim
 
-  subject: Assunto
+  subject: Sujeito
   tel: Telefone
   'true': sim
   update: Atualizar
   webContentSections:
     aboutUs: Sobre nós
     contactInformation: Informações de contato
-    home: Início
+    home: Inicio
     sell: Vender
     tagLine: Linha tag

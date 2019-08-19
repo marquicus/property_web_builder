@@ -1,7 +1,4 @@
-I18n.available_locales = [:ar, :ca, :de, :en, :es,
-                          :fr, :it, :nl, :pl, :pt,
-                          :ro, :ru, :tr, :vi, :ko,
-                          :bg ]
+I18n.available_locales = [:en, :ca, :es, :fr, :ar, :de, :ru, :pt, :vi, :tr, :it, :nl]
 # I18n.available_locales = [:en, :es, :fr, :de, :ru, :pt]
 
-Globalize.fallbacks = {de: [:en],es: [:en], pl: [:en], ro: [:en], ru: [:en], ko: [:en], bg: [:en]}
+Globalize.fallbacks = {:de => [:en],:es => [:en], :ru => [:en]}

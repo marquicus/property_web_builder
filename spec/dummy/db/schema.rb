@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180507144720) do
+ActiveRecord::Schema.define(version: 20171201161324) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -143,15 +143,6 @@ ActiveRecord::Schema.define(version: 20180507144720) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "theme_name"
-  end
-
-  create_table "pwb_authorizations", force: :cascade do |t|
-    t.bigint "user_id"
-    t.string "provider"
-    t.string "uid"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_pwb_authorizations_on_user_id"
   end
 
   create_table "pwb_clients", id: :serial, force: :cascade do |t|
@@ -318,7 +309,6 @@ ActiveRecord::Schema.define(version: 20180507144720) do
     t.string "origin_email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "contact_id"
   end
 
   create_table "pwb_page_contents", force: :cascade do |t|
@@ -331,10 +321,8 @@ ActiveRecord::Schema.define(version: 20180507144720) do
     t.bigint "content_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "website_id"
     t.index ["content_id"], name: "index_pwb_page_contents_on_content_id"
     t.index ["page_id"], name: "index_pwb_page_contents_on_page_id"
-    t.index ["website_id"], name: "index_pwb_page_contents_on_website_id"
   end
 
   create_table "pwb_page_parts", force: :cascade do |t|
@@ -475,10 +463,6 @@ ActiveRecord::Schema.define(version: 20180507144720) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "area_unit", default: 0
-    t.string "neighborhood"
-    t.string "import_url"
-    t.json "related_urls", default: {}
-    t.string "slug"
     t.index ["archived"], name: "index_pwb_props_on_archived"
     t.index ["flags"], name: "index_pwb_props_on_flags"
     t.index ["for_rent_long_term"], name: "index_pwb_props_on_for_rent_long_term"
@@ -488,7 +472,7 @@ ActiveRecord::Schema.define(version: 20180507144720) do
     t.index ["latitude", "longitude"], name: "index_pwb_props_on_latitude_and_longitude"
     t.index ["price_rental_monthly_current_cents"], name: "index_pwb_props_on_price_rental_monthly_current_cents"
     t.index ["price_sale_current_cents"], name: "index_pwb_props_on_price_sale_current_cents"
-    t.index ["reference"], name: "index_pwb_props_on_reference"
+    t.index ["reference"], name: "index_pwb_props_on_reference", unique: true
     t.index ["visible"], name: "index_pwb_props_on_visible"
   end
 
@@ -526,17 +510,6 @@ ActiveRecord::Schema.define(version: 20180507144720) do
     t.index ["reset_password_token"], name: "index_pwb_users_on_reset_password_token", unique: true
   end
 
-  create_table "pwb_website_photos", force: :cascade do |t|
-    t.string "photo_key"
-    t.string "image"
-    t.string "description"
-    t.string "folder", default: "weebrix"
-    t.integer "file_size"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["photo_key"], name: "index_pwb_website_photos_on_photo_key"
-  end
-
   create_table "pwb_websites", id: :serial, force: :cascade do |t|
     t.string "analytics_id"
     t.integer "analytics_id_type"
@@ -563,18 +536,6 @@ ActiveRecord::Schema.define(version: 20180507144720) do
     t.text "raw_css"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.json "search_config_rent", default: {}
-    t.json "search_config_buy", default: {}
-    t.json "search_config_landing", default: {}
-    t.json "admin_config", default: {}
-    t.json "styles_config", default: {}
-    t.json "imports_config", default: {}
-    t.json "whitelabel_config", default: {}
-    t.json "exchange_rates", default: {}
-    t.string "favicon_url"
-    t.string "main_logo_url"
-    t.string "maps_api_key"
-    t.string "recaptcha_key"
   end
 
   create_table "translations", id: :serial, force: :cascade do |t|

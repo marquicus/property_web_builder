@@ -2,33 +2,27 @@ module Pwb
   class EnquiryMailer < ApplicationMailer
     # default :bcc => "pwb@gmail.com"
 
-
-    def general_enquiry_targeting_agency(contact, message)
-      from = message.origin_email.presence || ::ApplicationMailer.default[:from] || "service@propertywebbuilder.com"
-      @contact = contact
-      @message = message
-      # @title = I18n.t "mailers.general_enquiry_targeting_agency.title"
-      # if enquiry.title
-      #   @subject = enquiry.title
-      # else
-      #   @subject = @title
-      # end
-      @title = message.title.presence || (I18n.t "mailers.general_enquiry_targeting_agency.title")
-      mail(to: message.delivery_email,
-           from: from,
-           subject: @title,
+    def general_enquiry_targeting_agency(client, enquiry)
+      @client = client
+      @enquiry = enquiry
+      @title = I18n.t "mailers.general_enquiry_targeting_agency.title"
+      if enquiry.title
+        @subject = enquiry.title
+      else
+        @subject = @title
+      end
+      mail(to: enquiry.delivery_email,
+           subject: @subject,
            template_path: 'pwb/mailers',
            template_name: 'general_enquiry_targeting_agency')
     end
 
-    def property_enquiry_targeting_agency(contact, message, property)
-      from = message.origin_email.presence || ::ApplicationMailer.default[:from] || "service@propertywebbuilder.com"
-      @contact = contact
-      @message = message
+    def property_enquiry_targeting_agency(client, enquiry, property)
+      @client = client
+      @enquiry = enquiry
       @property = property
-      @title = message.title.presence || (I18n.t "mailers.property_enquiry_targeting_agency.title")
-      mail(to: message.delivery_email,
-           from: from,
+      @title = enquiry.title
+      mail(to: enquiry.delivery_email,
            subject: @title,
            template_path: 'pwb/mailers',
            template_name: 'property_enquiry_targeting_agency')

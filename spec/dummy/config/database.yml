@@ -90,8 +90,3 @@ production:
   database: <%= ENV['POSTGRES_DB'] %>
   username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['POSTGRES_PASSWORD'] %>
-
-# below is to allow me to test precompiling assets:
-precompile:
-  <<: *default
-  database: pwb_dummy_development

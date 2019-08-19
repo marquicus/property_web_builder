@@ -14,19 +14,15 @@ en:
     pt-BR: Brazil
     it-IT: Italy
     de-DE: Germany
-    ko-KR: Korea
-    nl-Nl: Netherlands
-    nl-NL: Netherlands
-    pl-PL: Poland
-    ro-RO: Romania
     ru-RU: Russia
+    ne-NE: Netherlands
+    po-PO: Poland
     fi-FI: Finland
     no-NO: Norway
     ca-CA: Catalunia
     hi-IN: India
     vi-VI: Vietnam
     tr-TR: Turkey
-    bg-BG: Bulgaria
     ar: Arabic
     en: English
     es: Spanish
@@ -40,10 +36,6 @@ en:
     vi: Vietnamese
     tr: Turkish
     hi: Hindi
-    pl: Polish
-    ro: Romanian
-    ko: Korean
-    bg: Bulgarian
     sqmt: Square Meters
     sqft: Square Feet
     cad: Canadian Dollar
@@ -63,16 +55,6 @@ en:
     hkd: Hong Kong Dollar
     vnd: Vietnamese Dong
     try: Turkish Lira
-    pln: Polish Zloty
-    ron: Romanian Leu
-    ngn: Nigerian Naira
-    ghs: Ghanaian Cedi
-    dkk: Danish Krone
-    czk: Czech Koruna
-    sek: Swedish Krona
-    thb: Thai Baht
-    mad: Moroccan Dirham
-    egp: Egyptian Pound
     pages:
       aboutUs: About us
       sell: Sell
@@ -81,9 +63,6 @@ en:
     pageSections:
       notEditable:
         This section cannot be edited
-      homeSearchComponent: 
-        title: Search bar
-        info: Enable property search on the home page
       contactUsFormAndMap: 
         title: Form and Map
         info: Contact us form and map
@@ -190,10 +169,6 @@ en:
       suffixNl: in Dutch
       suffixVi: in Vietnamese
       suffixTr: in Turkish
-      suffixPl: in Polish
-      suffixRo: in Romanian
-      suffixKo: in Korean
-      suffixBg: in Bulgarian
       privacyPolicy: Privacy Policy
       legalAdvice: Legal Notice
       # landingcarousel: Text for carousel image
@@ -483,7 +458,7 @@ en:
       changeLang: Change web language
       changeLangPrompt: Web Configuration
       changeLegalText: Change 'Legal' texts
-      manageLandingCarousel: Edit landing page
+      manageLandingCarousel: Manage landing page carousel
       changeAboutUsText: Change 'About Us' text
       managePropertyTypes: Manage property types
       managePropertyExtras: Manage property features

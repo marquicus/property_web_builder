@@ -38,18 +38,14 @@ es:
     it-IT: Italy
     de-DE: Germany
     ru-RU: Russia
-    ko-KR: Korea
-    nl-Nl: Netherlands
-    nl-NL: Netherlands
-    pl-PL: Poland
-    ro-RO: Romania
+    ne-NE: Netherlands
+    po-PO: Poland
     fi-FI: Finland
     no-NO: Norway
     ca-CA: Catalunia
     hi-IN: India
     vi-VI: Vietnam
     tr-TR: Turkey
-    bg-BG: Bulgaria
     ar: Arabic
     en: English
     es: Spanish
@@ -63,10 +59,6 @@ es:
     vi: Vietnamese
     tr: Turko
     hi: Hindi
-    pl: Polish
-    ro: Romanian
-    ko: Korean
-    bg: Bulgarian
     sqmt: Square Meters
     sqft: Square Feet
     cad: Canadian Dollar
@@ -86,16 +78,6 @@ es:
     hkd: Hong Kong Dollar
     vnd: Vietnamese Dong
     try: Turkish Lira
-    pln: Polish Zloty
-    ron: Romanian Leu
-    ngn: Nigerian Naira
-    ghs: Ghanaian Cedi
-    dkk: Danish Krone
-    czk: Czech Koruna
-    sek: Swedish Krona
-    thb: Thai Baht
-    mad: Moroccan Dirham
-    egp: Egyptian Pound
     pages:
       aboutUs: Acerca de nosotros
       sell: Vender
@@ -104,9 +86,6 @@ es:
     pageSections:
       notEditable:
         Esta seccion no se puede editar
-      homeSearchComponent: 
-        title: Busqueda
-        info: Habilitar busqueda en pagina principal
       contactUsFormAndMap: 
         title: Form and Map
         info: Contact us form and map
@@ -213,10 +192,6 @@ es:
       suffixNl: en Hollandés
       suffixVi: en Vietnamese
       suffixTr: en Turko
-      suffixPl: en Polaco
-      suffixRo: en Rumano
-      suffixKo: in Korean
-      suffixBg: in Bulgarian
       privacyPolicy: Texto de la política de privacidad
       legalAdvice: Texto del aviso legal
       # landingcarousel: Texto del carrusel de imagenes

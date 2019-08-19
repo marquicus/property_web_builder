@@ -3,23 +3,23 @@ module Pwb
     mount_uploader :image, ContentPhotoUploader
     belongs_to :content, optional: true
     # I use block_key col to indicate if there is a fragment block associated
-    # with this photo
+    # with this photo 
 
     # validates_processing_of :image
     # validate :image_size_validation
 
     def optimized_image_url
-      unless image.url.present?
-        # if this method is called too soon after an image is
+      unless self.image.url.present?
+        # if this method is called too soon after an image is 
         # uploaded, might need to reload the record to
         # have the url available
-        reload
+        self.reload
       end
       if Rails.application.config.use_cloudinary
         options = {height: 800, crop: "scale", quality: "auto"}
-        image_url = Cloudinary::Utils.cloudinary_url image, options
+        image_url = Cloudinary::Utils.cloudinary_url self.image, options
       else
-        image_url = image.url
+        image_url = self.image.url
       end
       image_url
     end

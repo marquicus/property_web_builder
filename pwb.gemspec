@@ -45,13 +45,9 @@ Gem::Specification.new do |s|
   s.add_dependency 'simple_form'
   s.add_dependency 'fog-aws'
   # , require: 'fog-aws'
-  s.add_dependency 'pg', '< 1.0'
+  s.add_dependency 'pg'
   s.add_dependency 'devise'
   s.add_dependency 'devise-i18n'
-  s.add_dependency 'omniauth'
-  s.add_dependency 'omniauth-facebook'
-  # s.add_dependency 'omniauth-twitter'
-  # s.add_dependency 'omniauth'
   s.add_dependency 'cloudinary'
   s.add_dependency 'rets'
   s.add_dependency 'active_hash'
@@ -62,7 +58,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'faker'
   s.add_dependency 'flag_shih_tzu'
   s.add_dependency 'liquid'
-  s.add_dependency 'geocoder'
+
 
   # s.add_dependency 'comfortable_mexican_sofa', '~> 1.12.0'
   # s.add_dependency 'redis'

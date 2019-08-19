@@ -8,9 +8,6 @@ ru:
     pageSections:
       notEditable:
         This section cannot be edited
-      homeSearchComponent: 
-        title: Search bar
-        info: Enable property search on the home page
       contactUsFormAndMap: 
         title: Form and Map
         info: Contact us form and map
@@ -44,7 +41,7 @@ ru:
         info: A little bit about your business
       landingHero:
         title: Main header
-        info: Large image and text highlighting your business
+        info: Large image and text highlighting your busi
     "true": "true"
     "false": "false"
     "yes": "да"
@@ -60,19 +57,13 @@ ru:
     it-IT: Italy
     de-DE: Germany
     ru-RU: Russia
-    ko-KR: Korea
-    nl-Nl: Netherlands
-    nl-NL: Netherlands
-    pl-PL: Poland
-    ro-RO: Romania
+    ne-NE: Netherlands
+    po-PO: Poland
     fi-FI: Finland
     no-NO: Norway
     ca-CA: Catalunia
     hi-IN: India
     hi: Hindi
-    pl: Polish
-    ro: Romanian
-    ko: Korean
     sqmt: Квадратные метры
     sqft: Квадратный фут
     cad: Canadian Dollar
@@ -90,16 +81,6 @@ ru:
     brl: Brazilian Real
     zar: South African Rand
     hkd: Hong Kong Dollar
-    pln: Polish Zloty
-    ron: Romanian Leu
-    ngn: Nigerian Naira
-    ghs: Ghanaian Cedi
-    dkk: Danish Krone
-    czk: Czech Koruna
-    sek: Swedish Krona
-    thb: Thai Baht
-    mad: Moroccan Dirham
-    egp: Egyptian Pound
     inTabLabels:
       topNav: Верхнее меню
       footer: Нижнее меню
@@ -167,8 +148,6 @@ ru:
       suffixCa: на каталонском
       suffixNl: на датском
       suffixFr: in French
-      suffixPl: in Polish
-      suffixRo: in Romanian
       privacyPolicy: Политика конфиденциальности
       legalAdvice: Соглашение с пользователем
       # landingcarousel: Текст для фотографии слайдера

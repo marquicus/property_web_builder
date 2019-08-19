@@ -35,8 +35,8 @@ module Pwb
       @page_title = @current_agency.company_name
       # @content_to_show = []
       if @page.present?
-        @page_title = @page.page_title + ' - ' + @current_agency.company_name
-        # TODO: - allow addition of custom content
+        @page_title = @page.page_title + ' - ' + @current_agency.company_name        
+        # TODO - allow addition of custom content
         # @page.ordered_visible_page_contents.each do |page_content|
         #   @content_to_show.push page_content.content.raw
         # end
@@ -80,8 +80,8 @@ module Pwb
       @page_title = @current_agency.company_name
       # @content_to_show = []
       if @page.present?
-        @page_title = @page.page_title + ' - ' + @current_agency.company_name
-        # TODO: - allow addition of custom content
+        @page_title = @page.page_title + ' - ' + @current_agency.company_name        
+        # TODO - allow addition of custom content
         # @page.ordered_visible_page_contents.each do |page_content|
         #   @content_to_show.push page_content.content.raw
         # end
@@ -115,20 +115,21 @@ module Pwb
     def set_map_markers
       @map_markers = []
       @properties.each do |property|
-        next unless property.show_map
-        @map_markers.push(
-          {
-            id: property.id,
-            title: property.title,
-            show_url: property.contextual_show_path(@operation_type),
-            image_url: property.primary_image_url,
-            display_price: property.contextual_price_with_currency(@operation_type),
-            position: {
-              lat: property.latitude,
-              lng: property.longitude
+        if property.show_map
+          @map_markers.push(
+            {
+              id: property.id,
+              title: property.title,
+              show_url: property.contextual_show_path(@operation_type),
+              image_url: property.primary_image_url,
+              display_price: property.contextual_price_with_currency(@operation_type),
+              position: {
+                lat: property.latitude,
+                lng: property.longitude
+              }
             }
-          }
-        )
+          )
+        end
       end
     end
 
@@ -232,7 +233,6 @@ module Pwb
     # end
 
     private
-
     def header_image_url
       # lc_content = Content.where(tag: 'landing-carousel')[0]
       lc_photo = ContentPhoto.find_by_block_key "landing_img"

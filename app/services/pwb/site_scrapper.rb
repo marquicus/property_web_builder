@@ -12,7 +12,7 @@ module Pwb
     end
 
     def retrieve_from_api
-      conn = Faraday.new(url: target_url) do |faraday|
+      conn = Faraday.new(:url => target_url) do |faraday|
         # faraday.basic_auth('', '')
         faraday.request  :url_encoded             # form-encode POST params
         faraday.response :logger                  # log requests to STDOUT
@@ -30,7 +30,7 @@ module Pwb
         end
         count += 1
       end
-      retrieved_properties
+      return retrieved_properties
     end
 
     def retrieve_from_webpage
@@ -71,21 +71,24 @@ module Pwb
 
 
       properties.push property_hash
-      properties
+      return properties
     end
 
     private
 
-    def retrieve_target_text(doc, mapping)
+    def retrieve_target_text doc, mapping
       target_elements = doc.css(mapping["cssLocator"]) || []
       target_text = ""
       if target_elements.present? && mapping["cssCountId"].present?
         begin
           target_text = target_elements[mapping["cssCountId"].to_i].text || ""
         rescue Exception => e
+
         end
       end
-      target_text
+      return target_text
     end
+
+
   end
 end

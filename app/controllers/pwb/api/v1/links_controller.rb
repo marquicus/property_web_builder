@@ -1,5 +1,6 @@
 module Pwb
   class Api::V1::LinksController < ApplicationApiController
+
     def index
       # Globalize.fallbacks = {:ru => [:en]}
       # top_nav_links, footer_links = nil

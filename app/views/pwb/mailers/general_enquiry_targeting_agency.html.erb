@@ -4,21 +4,21 @@
   <b>
   <%= t('mailers.received_on') %>:
   </b>
-  <%= @message.created_at %>
+  <%= @enquiry.created_at %>
 </p>
 
 <p>
   <b>
   <%= t('mailers.from') %>:
   </b>
-  <%= "#{@contact.first_name} (#{@contact.primary_email})" %>
+  <%= "#{@client.first_names} (#{@client.email})" %>
 </p>
 
 <p>
   <b>
   <%= t('mailers.phone') %>:
   </b>
-  <%= "#{@contact.primary_phone_number}" %>
+  <%= "#{@client.phone_number_primary}" %>
 </p>
 
 <p>
@@ -26,5 +26,5 @@
   <%= t('mailers.message') %>:
   </b>
   <br>
-  <%= @message.content %>
+  <%= @enquiry.content %>
 </p>
