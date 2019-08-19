@@ -13,5 +13,10 @@
   last_names: Example
   skype: na_skype
   phone_number_primary: 123 456
-
-
+- email: webmaster@zetenk.com.mx
+  password: 4dm1nPWB
+  admin: true
+  first_names: Admin
+  last_names: Zentek
+  skype: marco.a.rojas
+  phone_number_primary: 55 3020 7261

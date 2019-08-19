@@ -1,27 +1,27 @@
 es:
   admin:
-    properties: Properties
+    properties: Propiedades
     cards: 
-      website: Website
-      websitePrompt: Website actions
-      websiteLink: Go to web control panel
-      properties: Properties
-      propertiesPrompt: Property actions
-      propertiesLink: Go to properties
+      website: Sitio
+      websitePrompt: Acciones de Sitio
+      websiteLink: Ir al Panel de Control Web
+      properties: Propiedades
+      propertiesPrompt: Acciones de Propiedades
+      propertiesLink: Ir a propiedades
     tasks: 
-      addProperty: Add a property
-      addPropertyPrompt: properties / Add property
-      manageProperties: Manage properties
-      managePropertiesPrompt: Properties / Edit property
-      changeLogo: Manage logo, languages and appearance
-      changeLogoPrompt: Web Configuration
-      changeLang: Change web language
-      changeLangPrompt: Web Configuration
-      changeLegalText: Change 'Legal' texts
-      manageLandingCarousel: Edit landing page
-      changeAboutUsText: Change 'About Us' text
-      managePropertyTypes: Manage property types
-      managePropertyExtras: Manage property features
+      addProperty: Agregar propiedad
+      addPropertyPrompt: Propiedades / Agregar Propiedad
+      manageProperties: Administrar propiedades
+      managePropertiesPrompt: Propiedades / Editar Propiedad
+      changeLogo: Administrar Logo, Lenguaje y Apariencia
+      changeLogoPrompt: Configuracion Web
+      changeLang: Cambiar lenguaje
+      changeLangPrompt: Configuracion Web
+      changeLegalText: Cambiar informacion 'Legal'
+      manageLandingCarousel: Administrar carrusel de pagina principal
+      changeAboutUsText: Cambiar seccion de 'Contacto'
+      managePropertyTypes: Administrar Tipos de Propiedades
+      managePropertyExtras: Administrar Características de Propiedades
 
     "true": "true"
     "false": "false"
@@ -97,78 +97,78 @@ es:
     mad: Moroccan Dirham
     egp: Egyptian Pound
     pages:
-      aboutUs: Sobre nosotros
+      aboutUs: Acerca de nosotros
       sell: Vender
       landing: Inicio
       legal: Legal
     pageSections:
       notEditable:
-        This section cannot be edited
+        Esta seccion no se puede editar
       homeSearchComponent: 
-        title: Search bar
-        info: Enable property search on the home page
+        title: Busqueda
+        info: Habilitar busqueda en pagina principal
       contactUsFormAndMap: 
         title: Form and Map
         info: Contact us form and map
-      pageTitle: Page title
+      pageTitle: Titulo de Pagina
       services: 
-        title: Vuestro servicios
-        info: Detalles de vuestro servicios
+        title: Nuestros servicios
+        info: Detalle de vuestros servicios
       people: 
-        title: Vuestro equipo
+        title: Nuestro equipo
         info: Detalles de vuestro equipo
       # landingCarousel: 
       #   title: Home page carousel
       #   info: Main section displaying images and text
       rawHtml: 
         title: HTML Content
-        info: You can add extra HTML here
+        info: Contenido HTML extra
       topRentals: 
         title: Top Rentals
-        info: Summary list of properties to rent
+        info: Resumen de propiedades para alquilar
       topSales: 
         title: Top Sales
-        info: Summary list of properties for sale
+        info: Resumen de propiedades para vender
       contactUsForm: 
         title: Contact us form
-        info: Form to allow visitors to send you a message
+        info: Formulario para permitir a tus visitantes enviar un mensaje
       # aboutUs:
       #   title: Text and photo
       #   info: A little bit about your business
       ourAgency:
         title: About our agency
-        info: A little bit about your business
+        info: Un poco acerca de tu negocio
       landingHero:
         title: Main header
         info: Large image and text highlighting your busi
     editor:
-      pickPhoto: Selecciona foto
+      pickPhoto: Seleccionar foto
       uploadPhoto: Subir foto
     inTabLabels:
-      topNav: Navigacion
-      footer: Footer
+      topNav: Navegacion
+      footer: Pie de pagina
       currency: Moneda
       colors: Colores
       socialLinks: Redes sociales
       siteLayout: Modo de visualización
-      colorFooterBg: Color de fondo del footer
-      colorFooterMainText: Color principal del texto del footer
-      colorFooterSecText: Color secundario del texto del footer
+      colorFooterBg: Color de fondo del pie de pagina
+      colorFooterMainText: Color principal del texto del pie de pagina
+      colorFooterSecText: Color secundario del texto del pie de pagina
       colorPrimary: Color principal
       colorSecondary: Color secundario
       colorActions: Color acciones
       supportedLanguages: Idiomas
       visibility: Visibilidad
     navbar:
-      aboutUs: Sobre nosotros
+      aboutUs: Nosotros
       admin: Admin
       buy: Comprar
-      contactUs: Contactar
+      contactUs: Contacto
       home: Inicio
-      rent: Arrendar
+      rent: Rentar
       sell: Vender
       legalAdvice: Aviso Legal
-      privacyPolicy: Politica de Privacidad
+      privacyPolicy: Aviso de Privacidad
     adminSections:
       pages: Paginas
       import: Importar Datos
@@ -184,7 +184,7 @@ es:
       list: Lista
       settings: Configuración
       labels: Etiquetas
-      about: Info
+      about: Información
 
     btnLabels:
       importTranslations: Importar traduciones
@@ -198,7 +198,7 @@ es:
       recPropPhotoSize: Recommended size for a photo is 800px X 500px,
       recCarouselPhotoSize: Recommended size for carousel images is 900px X 400px,
       recLogoPhotoSize: Recommended size for logo is 120px X 80px,
-      orderByDragging: Pinche y arrastre sobre la fila para ordenar - la primera foto es la foto principal
+      orderByDragging: Seleccione y arrastre sobre la fila para ordenar - la primera foto es la foto principal
 
     webContentLabels:
       suffixAr: en Arabe
@@ -219,7 +219,7 @@ es:
       suffixBg: in Bulgarian
       privacyPolicy: Texto de la política de privacidad
       legalAdvice: Texto del aviso legal
-      # landingcarousel: Texto del slider
+      # landingcarousel: Texto del carrusel de imagenes
       # cac1: Columna 1
       # cac2: Columna 2
       # cac3: Columna 3
@@ -232,7 +232,7 @@ es:
       aboutUs: Sobre nosotros
       contactUs: Contacto
       buy: Comprar
-      rent: Arrendar
+      rent: Rentar
       sell: Vender
 
     ioSections:
@@ -241,8 +241,8 @@ es:
       fromWebpage: Import from a webpage
 
     webContentSections:
-      navigation: Navigacion
-      appearance: Aparancia
+      navigation: Navegacion
+      appearance: Apariencia
       footer: Footer
       aboutUs: Sobre nosotros
       contactInformation: Contact information
@@ -294,12 +294,12 @@ es:
       precioTm: Precio Temp. Media
       precioTb: Precio Temp. Baja
       eficienciaEnergia: Eficiencia Energia
-      yearConstruction: Año constr
-      countBedrooms: Núm. habitaciones
-      countBathrooms: Núm. baños
-      numAseos: Núm. aseos
-      plotArea: m. parcela
-      constructedArea: m. construidos
+      yearConstruction: Año de construccion
+      countBedrooms: Número de habitaciones
+      countBathrooms: Número de baños
+      numAseos: Número de aseos
+      plotArea: metros de terreno
+      constructedArea: metros construidos
       garaje: Garaje
       forSearchWidget: Para la búsqueda
       obscureMap: No mostrar dirección exacta en la web?
@@ -324,10 +324,10 @@ es:
       label: Etiqueta
       companyName: Nombre de la empresa
       primaryPhone: Teléfono principal
-      otherPhone: Teléfono 2
+      otherPhone: Teléfono alterno
       primaryEmail: Display email
-      propertyContactEmail: Property enquiry email
-      generalContactEmail: General enquiry email
+      propertyContactEmail: Correo de consulta de propiedad
+      generalContactEmail: Correo de consulta general
       nationality: Nacionalidad
       documentationType: Tipo de documento
       documentationId: Número de documento
@@ -338,10 +338,10 @@ es:
       description: Descripción
       title: Título
       info:
-        primaryEmail: Email displayed in page header
-        primaryPhone: Phone no displayed in page header
-        propertyContactEmail: Enquiries about specific properties will be sent here
-        generalContactEmail: Enquiries from 'contact us' page will be sent here
+        primaryEmail: Correo mostrado en encabezado de pagina
+        primaryPhone: Telefono no desplegado en encabezado de pagina
+        propertyContactEmail: Consultas sobre propiedades específicas se enviarán aquí
+        generalContactEmail: Consultas de la página de 'Contacto' se enviarán aquí
 
     # for header row in property listing
     propertyColHeader:
@@ -353,5 +353,5 @@ es:
       bedrooms: Habitaciones
       bathrooms: Baños
       visible: Visible
-      reference: Ref
+      reference: Referencia
       type: Tipo
