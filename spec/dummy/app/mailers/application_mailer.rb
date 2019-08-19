@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'pwb@consultorinmobiliario.mx'
+  default from: 'contacto@consultorinmobiliario.mx'
   layout 'mailer'
 end

@@ -112,7 +112,7 @@
 - slug: top_nav_admin
   link_path: admin_with_locale_path
   sort_order: 9
-  visible: false
+  visible: true
   is_external: false
   placement: :top_nav
   link_title_en: Admin
@@ -265,7 +265,7 @@
   link_title_fr: Facebook
   link_title_de: Facebook
 - slug: social_media_twitter
-  link_url: "http://twitter.com/ci24siete"
+  link_url: "https://twitter.com/ci24siete"
   sort_order: 1
   visible: true
   icon_class: "fa-twitter fa"
