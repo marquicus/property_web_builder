@@ -3,7 +3,16 @@ module Pwb
     extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to_active_hash :theme, optional: true, foreign_key: "theme_name", class_name: "Pwb::Theme", shortcuts: [:friendly_name], primary_key: "name"
 
-    # TODO - add favicon image (and logo image directly)
+    has_many :page_contents
+    has_many :contents, through: :page_contents
+    # https://stackoverflow.com/questions/5856838/scope-with-join-on-has-many-through-association
+    has_many :ordered_visible_page_contents, -> { ordered_visible }, class_name: 'PageContent'
+    # has_many :page_parts, -> { where(page_slug: :footer) }
+    # , foreign_key: "page_slug", primary_key: "slug", class_name: "Pwb::Link"
+
+
+    # TODO: - add favicon image (and logo image directly)
+
     # as well as details hash for storing pages..
 
     include FlagShihTzu
@@ -14,31 +23,41 @@ module Pwb
 
     def self.unique_instance
       # there will be only one row, and its ID must be '1'
-      begin
-        # TODO - memoize
-        find(1)
-      rescue ActiveRecord::RecordNotFound
-        # slight race condition here, but it will only happen once
-        row = Website.new
-        row.id = 1
-        row.save!
-        row
-      end
+
+      # TODO: - memoize
+      find(1)
+    rescue ActiveRecord::RecordNotFound
+      # slight race condition here, but it will only happen once
+      row = Website.new
+      row.id = 1
+      row.save!
+      row
+    end
+
+    def page_parts
+      Pwb::PagePart.where(page_slug: "website")
+    end
+
+    def get_page_part(page_part_key)
+      # byebug
+      page_parts.where(page_part_key: page_part_key).first
     end
 
     # These are a list of links for pages to be
     # displayed in the pages section of the
     # admin site
+    # TODO: feb 2018 - enable management of
+    # below via /config path
     def admin_page_links
       #
-      if self.configuration["admin_page_links"].present?
-        return configuration["admin_page_links"]
+      if configuration["admin_page_links"].present?
+        configuration["admin_page_links"]
       else
-        return update_admin_page_links
+        update_admin_page_links
       end
     end
 
-    # TODO - call this each time a page
+    # TODO: - call this each time a page
     # needs to be added or
     # deleted from admin
     # jan 2018 - currently if a link title is updated
@@ -49,9 +68,22 @@ module Pwb
       Pwb::Link.ordered_visible_admin.each do |link|
         admin_page_links.push link.as_json
       end
-      self.configuration["admin_page_links"] = admin_page_links
-      self.save!
-      return admin_page_links
+      configuration["admin_page_links"] = admin_page_links
+      save!
+      admin_page_links
+    end
+
+    def slug
+      # slug is needed for
+      # admin client side page model
+      "website"
+    end
+
+    def as_json_for_page(options = nil)
+      # Sends data to admin in format compatible
+      # with client side page model
+      as_json({only: [],
+               methods: ["slug", "page_parts", "page_contents"]}.merge(options || {}))
     end
 
     def as_json(options = nil)
@@ -64,7 +96,7 @@ module Pwb
                "sale_price_options_from", "sale_price_options_till",
                "rent_price_options_from", "rent_price_options_till"
              ],
-             methods: ["style_variables","admin_page_links"]}.merge(options || {}))
+             methods: ["style_variables", "admin_page_links"]}.merge(options || {}))
     end
 
     enum default_area_unit: { sqmt: 0, sqft: 1 }
@@ -75,14 +107,14 @@ module Pwb
 
     def supported_locales_with_variants
       supported_locales_with_variants = []
-      self.supported_locales.each do |supported_locale|
+      supported_locales.each do |supported_locale|
         slwv_array = supported_locale.split("-")
         locale = slwv_array[0] || "en"
-        variant = slwv_array[1] || slwv_array[0]|| "UK"
+        variant = slwv_array[1] || slwv_array[0] || "UK"
         slwv = { "locale" => locale, "variant" => variant.downcase }
         supported_locales_with_variants.push slwv
       end
-      return supported_locales_with_variants
+      supported_locales_with_variants
     end
 
     def default_client_locale_to_use
@@ -92,7 +124,6 @@ module Pwb
       end
       locale.split("-")[0]
     end
-
 
     # admin client & default.css.erb uses style_variables
     # but it is stored in style_variables_for_theme json col
@@ -118,7 +149,7 @@ module Pwb
 
     # below used when rendering to decide which class names
     # to use for which elements
-    def get_element_class element_name
+    def get_element_class(element_name)
       style_details = style_variables_for_theme["vic"] || Pwb::PresetStyle.default_values
       style_associations = style_details["associations"] || []
       style_associations[element_name] || ""
@@ -126,7 +157,7 @@ module Pwb
 
     # below used by custom stylesheet generator to decide
     # values for various class names (mainly colors)
-    def get_style_var var_name
+    def get_style_var(var_name)
       style_details = style_variables_for_theme["vic"] || Pwb::PresetStyle.default_values
       style_vars = style_details["variables"] || []
       style_vars[var_name] || ""
@@ -144,8 +175,6 @@ module Pwb
         style_variables_for_theme["vic"] = preset_style.attributes.as_json
       end
     end
-
-
 
     def body_style
       body_style = ""

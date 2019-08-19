@@ -11,14 +11,21 @@ module Pwb
         # unless ENV["RAILS_ENV"] == "test"
         #   load File.join(Pwb::Engine.root, 'db', 'seeds', 'translations.rb')
         # end
-        unless I18n::Backend::ActiveRecord::Translation.all.length > 20
+        unless I18n::Backend::ActiveRecord::Translation.all.length > 600
+          # TODO: look in a directory and load all the files there
+          load File.join(Pwb::Engine.root, 'db', 'seeds', 'translations_ca.rb')
           load File.join(Pwb::Engine.root, 'db', 'seeds', 'translations_en.rb')
           load File.join(Pwb::Engine.root, 'db', 'seeds', 'translations_es.rb')
           load File.join(Pwb::Engine.root, 'db', 'seeds', 'translations_de.rb')
           load File.join(Pwb::Engine.root, 'db', 'seeds', 'translations_fr.rb')
+          load File.join(Pwb::Engine.root, 'db', 'seeds', 'translations_it.rb')
+          load File.join(Pwb::Engine.root, 'db', 'seeds', 'translations_nl.rb')
+          load File.join(Pwb::Engine.root, 'db', 'seeds', 'translations_pl.rb')
           load File.join(Pwb::Engine.root, 'db', 'seeds', 'translations_pt.rb')
+          load File.join(Pwb::Engine.root, 'db', 'seeds', 'translations_ro.rb')
           load File.join(Pwb::Engine.root, 'db', 'seeds', 'translations_ru.rb')
-          load File.join(Pwb::Engine.root, 'db', 'seeds', 'translations_ca.rb')
+          load File.join(Pwb::Engine.root, 'db', 'seeds', 'translations_ko.rb')
+          load File.join(Pwb::Engine.root, 'db', 'seeds', 'translations_bg.rb')
         end
 
         # seed_sections 'sections.yml'
@@ -26,7 +33,7 @@ module Pwb
         # seed_content 'carousel.yml'
         # seed_content 'about_us.yml'
         # seed_content 'static.yml'
-        seed_content 'footer.yml'
+        # seed_content 'footer.yml'
         # seed_content 'sell.yml'
         seed_agency 'agency.yml'
         # need to seed website first so correct currency is used
@@ -151,31 +158,31 @@ module Pwb
         end
       end
 
-      def seed_content(yml_file)
-        content_seed_file = Pwb::Engine.root.join('db', 'yml_seeds', yml_file)
-        content_yml = YAML.load_file(content_seed_file)
-        # tag is used to group content for an admin page
-        # key is camelcase (js style) - used client side to identify each item in a group of content
-        content_yml.each do |single_content_yml|
-          # check content does not already exist
-          next if Pwb::Content.where(key: single_content_yml['key']).count > 0
-          photos = []
-          if single_content_yml["photo_urls"].present?
-            photos = create_photos_from_urls single_content_yml["photo_urls"], Pwb::ContentPhoto
-            single_content_yml.except! "photo_urls"
-          end
-          if single_content_yml["photo_files"].present?
-            photos = create_photos_from_files single_content_yml["photo_files"], Pwb::ContentPhoto
-            single_content_yml.except! "photo_files"
-          end
-          new_content = Pwb::Content.create!(single_content_yml)
-          next unless !photos.empty?
-          photos.each do |photo|
-            new_content.content_photos.push photo
-          end
-        end
-        print("success!")
-      end
+      # def seed_content(yml_file)
+      #   content_seed_file = Pwb::Engine.root.join('db', 'yml_seeds', yml_file)
+      #   content_yml = YAML.load_file(content_seed_file)
+      #   # tag is used to group content for an admin page
+      #   # key is camelcase (js style) - used client side to identify each item in a group of content
+      #   content_yml.each do |single_content_yml|
+      #     # check content does not already exist
+      #     next if Pwb::Content.where(key: single_content_yml['key']).count > 0
+      #     photos = []
+      #     if single_content_yml["photo_urls"].present?
+      #       photos = create_photos_from_urls single_content_yml["photo_urls"], Pwb::ContentPhoto
+      #       single_content_yml.except! "photo_urls"
+      #     end
+      #     if single_content_yml["photo_files"].present?
+      #       photos = create_photos_from_files single_content_yml["photo_files"], Pwb::ContentPhoto
+      #       single_content_yml.except! "photo_files"
+      #     end
+      #     new_content = Pwb::Content.create!(single_content_yml)
+      #     next unless !photos.empty?
+      #     photos.each do |photo|
+      #       new_content.content_photos.push photo
+      #     end
+      #   end
+      #   print("success!")
+      # end
 
       def create_photos_from_files(photo_files, photo_class)
         photos = []

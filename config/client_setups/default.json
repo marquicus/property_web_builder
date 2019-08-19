@@ -59,6 +59,16 @@
   // https://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx
   "availableLocaleFields": [
     {
+      "labelTextTKey": "bg",
+      "fieldName": "bg",
+      "localeVariants": ["bg-BG"]
+    },
+    {
+      "labelTextTKey": "nl",
+      "fieldName": "nl",
+      "localeVariants": ["nl-Nl"]
+    },
+    {
       "labelTextTKey": "en",
       "fieldName": "en",
       "localeVariants": ["en-UK", "en-US"]
@@ -79,20 +89,10 @@
       "localeVariants": ["it-IT"]
     },
     {
-      "labelTextTKey": "pl",
-      "fieldName": "pl",
-      "localeVariants": ["pl-PL"]
-    },
-    {
       "labelTextTKey": "pt",
       "fieldName": "pt",
       "localeVariants": ["pt-PT", "pt-BR"],
       "isNotComplete": true
-    },
-    {
-      "labelTextTKey": "ro",
-      "fieldName": "ro",
-      "localeVariants": ["ro-RO"]
     },
     {
       "labelTextTKey": "ru",
@@ -142,6 +142,10 @@
     "labelTextTKey": "cad"
   },
   {
+    "value": "HKD",
+    "labelTextTKey": "hkd"
+  },
+  {
     "value": "BRL",
     "labelTextTKey": "brl"
   },
@@ -158,32 +162,8 @@
     "labelTextTKey": "cny"
   },
   {
-    "value": "CZK",
-    "labelTextTKey": "czk"
-  },
-  {
-    "value": "DKK",
-    "labelTextTKey": "dkk"
-  },
-  {
     "value": "EUR",
     "labelTextTKey": "eur"
-  },
-  {
-    "value": "EGP",
-    "labelTextTKey": "egp"
-  },
-  {
-    "value": "GBP",
-    "labelTextTKey": "gbp"
-  },
-  {
-    "value": "GHS",
-    "labelTextTKey": "ghs"
-  },
-  {
-    "value": "HKD",
-    "labelTextTKey": "hkd"
   },
   {
     "value": "USD",
@@ -194,40 +174,20 @@
     "labelTextTKey": "inr"
   },
   {
-    "value": "MAD",
-    "labelTextTKey": "mad"
-  },
-  {
-    "value": "MXN",
-    "labelTextTKey": "mxn"
-  },
-  {
-    "value": "NGN",
-    "labelTextTKey": "ngn"
-  },
-  {
-    "value": "PLN",
-    "labelTextTKey": "pln"
-  },
-  {
-    "value": "RON",
-    "labelTextTKey": "ron"
-  },
-  {
     "value": "RUB",
     "labelTextTKey": "rub"
   },
   {
-    "value": "SEK",
-    "labelTextTKey": "sek"
-  },
-  {
-    "value": "THB",
-    "labelTextTKey": "thb"
+    "value": "GBP",
+    "labelTextTKey": "gbp"
   },
   {
     "value": "TRY",
     "labelTextTKey": "try"
+  },
+  {
+    "value": "MXN",
+    "labelTextTKey": "mxn"
   },
   {
     "value": "VND",

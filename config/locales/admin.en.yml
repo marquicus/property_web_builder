@@ -14,7 +14,9 @@ en:
     pt-BR: Brazil
     it-IT: Italy
     de-DE: Germany
-    ne-NE: Netherlands
+    ko-KR: Korea
+    nl-Nl: Netherlands
+    nl-NL: Netherlands
     pl-PL: Poland
     ro-RO: Romania
     ru-RU: Russia
@@ -24,6 +26,7 @@ en:
     hi-IN: India
     vi-VI: Vietnam
     tr-TR: Turkey
+    bg-BG: Bulgaria
     ar: Arabic
     en: English
     es: Spanish
@@ -39,6 +42,8 @@ en:
     hi: Hindi
     pl: Polish
     ro: Romanian
+    ko: Korean
+    bg: Bulgarian
     sqmt: Square Meters
     sqft: Square Feet
     cad: Canadian Dollar
@@ -187,6 +192,8 @@ en:
       suffixTr: in Turkish
       suffixPl: in Polish
       suffixRo: in Romanian
+      suffixKo: in Korean
+      suffixBg: in Bulgarian
       privacyPolicy: Privacy Policy
       legalAdvice: Legal Notice
       # landingcarousel: Text for carousel image
@@ -476,7 +483,7 @@ en:
       changeLang: Change web language
       changeLangPrompt: Web Configuration
       changeLegalText: Change 'Legal' texts
-      manageLandingCarousel: Manage landing page carousel
+      manageLandingCarousel: Edit landing page
       changeAboutUsText: Change 'About Us' text
       managePropertyTypes: Manage property types
       managePropertyExtras: Manage property features

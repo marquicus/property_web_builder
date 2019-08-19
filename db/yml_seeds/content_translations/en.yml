@@ -1,5 +1,11 @@
 ---
 en:
+  website:
+    footer_content_html:
+      main_content:
+        <p>We are proud to be registered with the national association of realtors.</p>
+        <p>Registration number 12121212</p>
+      
   legal:
     content_html:
       main_content:

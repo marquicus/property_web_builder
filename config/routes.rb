@@ -52,7 +52,7 @@ Pwb::Engine.routes.draw do
 
 
     # https://github.com/plataformatec/devise/wiki/How-To:-Use-devise-inside-a-mountable-engine
-    devise_for :users, skip: :omniauth_callbacks, class_name: "Pwb::User", module: :devise, :controllers => { :registrations => "pwb/devise/registrations", omniauth_callbacks: 'pwb/devise/omniauth_callbacks' }
+    devise_for :users, skip: :omniauth_callbacks, class_name: "Pwb::User", module: :devise, controllers: { registrations: "pwb/devise/registrations", omniauth_callbacks: 'pwb/devise/omniauth_callbacks' }
     # specifying controllers above is from:
     # https://github.com/plataformatec/devise/wiki/How-To:-Customize-the-redirect-after-a-user-edits-their-profile
 
@@ -86,6 +86,7 @@ Pwb::Engine.routes.draw do
   namespace :api_ext do
     namespace :v1 do
       jsonapi_resources :props
+      # below for habitat:
       post '/properties/create_with_token' => 'props#create_with_token'
       # post '/properties/bulk_create_with_token' => 'props#bulk_create_with_token'
     end
@@ -160,7 +161,7 @@ Pwb::Engine.routes.draw do
         get "/mls" => "mls#index"
         get "/select_values" => "select_values#by_field_names"
 
-        # TODO - rename properties below to prop
+        # TODO: rename to update_features:
         post "properties/update_extras" => "properties#update_extras"
 
         delete "properties/photos/:id" => "properties#remove_photo"

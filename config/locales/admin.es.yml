@@ -1,27 +1,27 @@
 es:
   admin:
-    properties: Propiedades
+    properties: Properties
     cards: 
-      website: Sitio
-      websitePrompt: Acciones de Sitio
-      websiteLink: Ir al Panel de Control Web
-      properties: Propiedades
-      propertiesPrompt: Acciones de Propiedades
-      propertiesLink: Ir a propiedades
+      website: Website
+      websitePrompt: Website actions
+      websiteLink: Go to web control panel
+      properties: Properties
+      propertiesPrompt: Property actions
+      propertiesLink: Go to properties
     tasks: 
-      addProperty: Agregar propiedad
-      addPropertyPrompt: Propiedades / Agregar Propiedad
-      manageProperties: Administrar propiedades
-      managePropertiesPrompt: Propiedades / Editar Propiedad
-      changeLogo: Administrar Logo, Lenguaje y Apariencia
-      changeLogoPrompt: Configuracion Web
-      changeLang: Cambiar lenguaje
-      changeLangPrompt: Configuracion Web
-      changeLegalText: Cambiar informacion 'Legal'
-      manageLandingCarousel: Administrar carrusel de pagina principal
-      changeAboutUsText: Cambiar seccion de 'Contacto'
-      managePropertyTypes: Administrar Tipos de Propiedades
-      managePropertyExtras: Administrar Características de Propiedades
+      addProperty: Add a property
+      addPropertyPrompt: properties / Add property
+      manageProperties: Manage properties
+      managePropertiesPrompt: Properties / Edit property
+      changeLogo: Manage logo, languages and appearance
+      changeLogoPrompt: Web Configuration
+      changeLang: Change web language
+      changeLangPrompt: Web Configuration
+      changeLegalText: Change 'Legal' texts
+      manageLandingCarousel: Edit landing page
+      changeAboutUsText: Change 'About Us' text
+      managePropertyTypes: Manage property types
+      managePropertyExtras: Manage property features
 
     "true": "true"
     "false": "false"
@@ -38,7 +38,9 @@ es:
     it-IT: Italy
     de-DE: Germany
     ru-RU: Russia
-    ne-NE: Netherlands
+    ko-KR: Korea
+    nl-Nl: Netherlands
+    nl-NL: Netherlands
     pl-PL: Poland
     ro-RO: Romania
     fi-FI: Finland
@@ -47,6 +49,7 @@ es:
     hi-IN: India
     vi-VI: Vietnam
     tr-TR: Turkey
+    bg-BG: Bulgaria
     ar: Arabic
     en: English
     es: Spanish
@@ -58,10 +61,12 @@ es:
     de: German
     pt: Portuguese
     vi: Vietnamese
-    tr: Turco
+    tr: Turko
     hi: Hindi
     pl: Polish
     ro: Romanian
+    ko: Korean
+    bg: Bulgarian
     sqmt: Square Meters
     sqft: Square Feet
     cad: Canadian Dollar
@@ -92,7 +97,7 @@ es:
     mad: Moroccan Dirham
     egp: Egyptian Pound
     pages:
-      aboutUs: Acerca de nosotros
+      aboutUs: Sobre nosotros
       sell: Vender
       landing: Inicio
       legal: Legal
@@ -107,10 +112,10 @@ es:
         info: Contact us form and map
       pageTitle: Page title
       services: 
-        title: Nuestros servicios
-        info: Detalle de vuestros servicios
+        title: Vuestro servicios
+        info: Detalles de vuestro servicios
       people: 
-        title: Nuestro equipo
+        title: Vuestro equipo
         info: Detalles de vuestro equipo
       # landingCarousel: 
       #   title: Home page carousel
@@ -137,33 +142,33 @@ es:
         title: Main header
         info: Large image and text highlighting your busi
     editor:
-      pickPhoto: Seleccionar foto
+      pickPhoto: Selecciona foto
       uploadPhoto: Subir foto
     inTabLabels:
-      topNav: Navegacion
-      footer: Pie de pagina
+      topNav: Navigacion
+      footer: Footer
       currency: Moneda
       colors: Colores
       socialLinks: Redes sociales
       siteLayout: Modo de visualización
-      colorFooterBg: Color de fondo del pie de pagina
-      colorFooterMainText: Color principal del texto del pie de pagina
-      colorFooterSecText: Color secundario del texto del pie de pagina
+      colorFooterBg: Color de fondo del footer
+      colorFooterMainText: Color principal del texto del footer
+      colorFooterSecText: Color secundario del texto del footer
       colorPrimary: Color principal
       colorSecondary: Color secundario
       colorActions: Color acciones
       supportedLanguages: Idiomas
       visibility: Visibilidad
     navbar:
-      aboutUs: Nosotros
+      aboutUs: Sobre nosotros
       admin: Admin
       buy: Comprar
-      contactUs: Contacto
+      contactUs: Contactar
       home: Inicio
-      rent: Rentar
+      rent: Arrendar
       sell: Vender
       legalAdvice: Aviso Legal
-      privacyPolicy: Aviso de Privacidad
+      privacyPolicy: Politica de Privacidad
     adminSections:
       pages: Paginas
       import: Importar Datos
@@ -179,7 +184,7 @@ es:
       list: Lista
       settings: Configuración
       labels: Etiquetas
-      about: Información
+      about: Info
 
     btnLabels:
       importTranslations: Importar traduciones
@@ -193,7 +198,7 @@ es:
       recPropPhotoSize: Recommended size for a photo is 800px X 500px,
       recCarouselPhotoSize: Recommended size for carousel images is 900px X 400px,
       recLogoPhotoSize: Recommended size for logo is 120px X 80px,
-      orderByDragging: Seleccione y arrastre sobre la fila para ordenar - la primera foto es la foto principal
+      orderByDragging: Pinche y arrastre sobre la fila para ordenar - la primera foto es la foto principal
 
     webContentLabels:
       suffixAr: en Arabe
@@ -210,9 +215,11 @@ es:
       suffixTr: en Turko
       suffixPl: en Polaco
       suffixRo: en Rumano
+      suffixKo: in Korean
+      suffixBg: in Bulgarian
       privacyPolicy: Texto de la política de privacidad
       legalAdvice: Texto del aviso legal
-      # landingcarousel: Texto del carrusel de imagenes
+      # landingcarousel: Texto del slider
       # cac1: Columna 1
       # cac2: Columna 2
       # cac3: Columna 3
@@ -225,7 +232,7 @@ es:
       aboutUs: Sobre nosotros
       contactUs: Contacto
       buy: Comprar
-      rent: Rentar
+      rent: Arrendar
       sell: Vender
 
     ioSections:
@@ -234,8 +241,8 @@ es:
       fromWebpage: Import from a webpage
 
     webContentSections:
-      navigation: Navegacion
-      appearance: Apariencia
+      navigation: Navigacion
+      appearance: Aparancia
       footer: Footer
       aboutUs: Sobre nosotros
       contactInformation: Contact information
@@ -287,12 +294,12 @@ es:
       precioTm: Precio Temp. Media
       precioTb: Precio Temp. Baja
       eficienciaEnergia: Eficiencia Energia
-      yearConstruction: Año de construcción
-      countBedrooms: Número de habitaciones
-      countBathrooms: Número de baños
-      numAseos: Número de aseos
-      plotArea: Metros de terreno
-      constructedArea: Metros construidos
+      yearConstruction: Año constr
+      countBedrooms: Núm. habitaciones
+      countBathrooms: Núm. baños
+      numAseos: Núm. aseos
+      plotArea: m. parcela
+      constructedArea: m. construidos
       garaje: Garaje
       forSearchWidget: Para la búsqueda
       obscureMap: No mostrar dirección exacta en la web?
@@ -301,14 +308,14 @@ es:
       priceSaleCurrent: Precio
       saleDiscount: Descuento
       priceSaleOriginal: Precio original
-      longTermRental: Disponible para renta a largo plazo?
-      seasonalRental: Disponible para renta vacacional?
+      longTermRental: Disponible para arriendo a largo plazo?
+      seasonalRental: Disponible para arriendo vacacional?
       priceRentalMonthlyHighSeason: Precio de temporada alta
       priceRentalMonthlyLowSeason: Precio de temporada baja
       priceRentalMonthlyStandardSeason: Precio de temporada media
-      priceRentalMonthlyCurrent: Precio de renta (mensual)
-      longTermRentalDiscount: Descuento en la renta
-      priceRentalMonthlyOriginal: Precio original de la renta (mensual)
+      priceRentalMonthlyCurrent: Precio de arriendo (mensual)
+      longTermRentalDiscount: Descuento en el arriendo
+      priceRentalMonthlyOriginal: Precio original del arriendo (mensual)
       firstNames: Nombre
       lastNames: Apellidos
       visible: Visible
@@ -317,10 +324,10 @@ es:
       label: Etiqueta
       companyName: Nombre de la empresa
       primaryPhone: Teléfono principal
-      otherPhone: Teléfono alterno
+      otherPhone: Teléfono 2
       primaryEmail: Display email
-      propertyContactEmail: Correo de consulta de propiedad
-      generalContactEmail: Correo de consulta general
+      propertyContactEmail: Property enquiry email
+      generalContactEmail: General enquiry email
       nationality: Nacionalidad
       documentationType: Tipo de documento
       documentationId: Número de documento
@@ -331,10 +338,10 @@ es:
       description: Descripción
       title: Título
       info:
-        primaryEmail: Correo mostrado en encabezado de pagina
-        primaryPhone: Telefono no desplegado en encabezado de pagina
-        propertyContactEmail: Consultas sobre propiedades específicas se enviarán aquí
-        generalContactEmail: Consultas de la página de 'Contacto' se enviarán aquí
+        primaryEmail: Email displayed in page header
+        primaryPhone: Phone no displayed in page header
+        propertyContactEmail: Enquiries about specific properties will be sent here
+        generalContactEmail: Enquiries from 'contact us' page will be sent here
 
     # for header row in property listing
     propertyColHeader:
@@ -346,5 +353,5 @@ es:
       bedrooms: Habitaciones
       bathrooms: Baños
       visible: Visible
-      reference: Referencia
+      reference: Ref
       type: Tipo

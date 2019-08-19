@@ -2,9 +2,26 @@
 
 Please help support this project by making a contribution to PropertyWebBuilder here: https://opencollective.com/property_web_builder
 
-[![Backers on Open Collective](https://opencollective.com/property_web_builder/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/property_web_builder/sponsors/badge.svg)](#sponsors)[![Build Status](https://api.travis-ci.org/etewiah/property_web_builder.svg?branch=master)](https://api.travis-ci.org/etewiah/property_web_builder)
+[![Backers on Open Collective](https://opencollective.com/property_web_builder/backers/badge.svg)](#backers)
+[![Sponsors on Open Collective](https://opencollective.com/property_web_builder/sponsors/badge.svg)](#sponsors)
+[![Build Status](https://api.travis-ci.org/etewiah/property_web_builder.svg?branch=master)](https://api.travis-ci.org/etewiah/property_web_builder)
+[![Gitter](https://badges.gitter.im/dev-1pr/1pr.svg)](https://gitter.im/property_web_builder/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=body_badge)
+[![Open Source Helpers](https://www.codetriage.com/etewiah/property_web_builder/badges/users.svg)](https://www.codetriage.com/etewiah/property_web_builder)
 
-This project has been created to address a glaring gap in the rails ecosystem: the lack of an open source project for real estate websites.  
+
+## July 2019 update!
+
+Over the last year or so I have made several improvements to PWB for various paying clients.  I have not however had the time to merge those improvements back into the open source repo.  If you have some specific requirements that you are willing to pay for, reach out to me ([LinkedIn](https://www.linkedin.com/company/propertywebbuilder)) I might be able to help.
+
+Here are a couple of sites that I have built using PWB as a base:
+
+[https://www.buenavistahomes.eu/](https://www.buenavistahomes.eu/)
+
+[https://www.holidays2malaga.com/](https://www.holidays2malaga.com/)
+
+## Motivation
+
+This project has been created to address a glaring gap in the rails ecosystem: the lack of an open source project for real estate websites.
 
 The result is that WordPress has become the dominant tool for creating real estate websites.  This is far from ideal and PropertyWebBuilder seeks to address this.
 
@@ -20,7 +37,6 @@ To see the admin panel, login as user admin@example.com with a password of "pwb1
 
 You can see an example of a production site created with PropertyWebBuilder here:
 
-[http://re-renting.com](http://re-renting.com)
 
 ## Create your own real estate website with no technical knowledge
 
@@ -37,7 +53,7 @@ You may be asked for credit card details when you create an account but you will
 
 ## Install as a standalone site
 
-PWB has been designed to be included as an engine in an existing Ruby on Rails app.  In this repo I have a Ruby on Rails app that includes PWB.  
+PWB has been designed to be included as an engine in an existing Ruby on Rails app.  In this repo I have a Ruby on Rails app that includes PWB.
 
 [https://github.com/etewiah/pwb-for-heroku](https://github.com/etewiah/pwb-for-heroku)
 
@@ -123,7 +139,7 @@ These are some features I plan to add over the coming months.  If there is somet
 ## Contribute and spread the love
 We encourage you to contribute to this project and file issues for any problems you encounter.
 
-If you like it, please star it and spread the word on [Twitter](https://twitter.com/prptywebbuilder), [LinkedIn](https://www.linkedin.com/company/propertywebbuilder) and [Facebook](https://www.facebook.com/propertywebbuilder).  You can also subscribe to github notifications on this project.  
+If you like it, please star it and spread the word on [Twitter](https://twitter.com/prptywebbuilder), [LinkedIn](https://www.linkedin.com/company/propertywebbuilder) and [Facebook](https://www.facebook.com/propertywebbuilder).  You can also subscribe to github notifications on this project.
 
 Please consider making a contribution to the development of PropertyWebBuilder.  If you wish to pay for specific enhancements, please email me directly (opensource at propertywebbuilder.com).
 
@@ -132,7 +148,7 @@ I would like PropertyWebBuilder to be available in as many languages as possible
 
 For instructions on how to add a new language, please see:
 [https://github.com/etewiah/property_web_builder/wiki/Adding-translations-for-a-new-language](https://github.com/etewiah/property_web_builder/wiki/Adding-translations-for-a-new-language)
-<!-- 
+<!--
 ---
 
 Thanks to the awesome [Locale](http://www.localeapp.com/) contributing to the translations is super easy!
@@ -145,7 +161,7 @@ Thanks to the awesome [Locale](http://www.localeapp.com/) contributing to the tr
 ## Contributors
 
 This project exists thanks to all the people who contribute. [[Contribute]](CONTRIBUTING.md).
-<a href="graphs/contributors"><img src="https://opencollective.com/property_web_builder/contributors.svg?width=890" /></a>
+<a href="https://github.com/etewiah/property_web_builder/graphs/contributors"><img src="https://opencollective.com/property_web_builder/contributors.svg?width=890" /></a>
 
 
 ## Backers

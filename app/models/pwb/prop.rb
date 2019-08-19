@@ -4,6 +4,26 @@ module Pwb
     globalize_accessors locales: I18n.available_locales
     # globalize_accessors locales: [:en, :ca, :es, :fr, :ar, :de, :ru, :pt]
 
+    # geocoded_by :address, :lookup => lambda{ |obj| obj.geocoder_lookup }
+    # reverse_geocoded_by :latitude, :longitude do |obj,results|
+    geocoded_by :geocodeable_address do |obj, results|
+      if geo = results.first
+        obj.longitude    = geo.longitude
+        obj.latitude    = geo.latitude
+        obj.city    = geo.city
+        obj.street_number = geo.street_number
+        # obj.street_name = geo.street_name
+        obj.street_address = geo.street_address
+        obj.postal_code = geo.postal_code
+        obj.province = geo.province
+        obj.region = geo.state
+        obj.country = geo.country
+        # TODO - add neighborhood (google spelling)
+      end
+    end
+
+    after_validation :geocode
+
     # below needed to avoid "... is not an attribute known to Active Record" warnings
     attribute :title
     attribute :description
@@ -58,6 +78,11 @@ module Pwb
     # scope :starts_with, -> (name) { where("name like ?", "#{name}%")}
     # scope :pending, joins(:admin_request_status).where('admin_request_statuses.name = ?','Pending Approval')
 
+    def geocodeable_address
+      # [street, city, state, country].compact.join(', ')
+      street_address.to_s + " , " + city.to_s + " , " + province.to_s + " , " + postal_code.to_s
+    end
+
     def has_garage
       count_garages && (count_garages > 0)
     end
@@ -75,7 +100,7 @@ module Pwb
     end
 
     # Getter
-    def get_extras
+    def get_features
       Hash[features.map { |key, _value| [key.feature_key, true] }]
       # http://stackoverflow.com/questions/39567/what-is-the-best-way-to-convert-an-array-to-a-hash-in-ruby
       # returns something like {"terraza"=>true, "alarma"=>true, "gotele"=>true, "sueloMarmol"=>true}
@@ -85,11 +110,11 @@ module Pwb
     # Setter- called by update_extras in properties controller
     # expects a hash with keys like "cl.casafactory.fieldLabels.extras.alarma"
     # each with a value of true or false
-    def set_extras=(extras_json)
-      return unless extras_json.class == Hash
-      extras_json.keys.each do |feature_key|
+    def set_features=(features_json)
+      # return unless features_json.class == Hash
+      features_json.keys.each do |feature_key|
         # TODO - create feature_key if its missing
-        if extras_json[feature_key] == "true" || extras_json[feature_key] == true
+        if features_json[feature_key] == "true" || features_json[feature_key] == true
           features.find_or_create_by( feature_key: feature_key)
         else
           features.where( feature_key: feature_key).delete_all
@@ -101,7 +126,7 @@ module Pwb
     # list of extras for property
     def extras_for_display
       merged_extras = []
-      get_extras.keys.each do |extra|
+      get_features.keys.each do |extra|
         # extras_field_key = "fieldLabels.extras.#{extra}"
         translated_option_key = I18n.t extra
         merged_extras.push translated_option_key

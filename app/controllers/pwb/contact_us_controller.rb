@@ -81,14 +81,12 @@ module Pwb
 
       unless @current_agency.email_for_general_contact_form.present?
         # in case a delivery email has not been set
-        @enquiry.delivery_email = "pwb@consultorinmobiliario.mx"
+        @enquiry.delivery_email = "no_delivery_email@propertywebbuilder.com"
       end
 
-      @enquiry.client_id = @contact
+      @enquiry.contact = @contact
       @enquiry.save
 
-
-      p @enquiry
       # @enquiry.delivery_email = ""
       EnquiryMailer.general_enquiry_targeting_agency(@contact, @enquiry).deliver_now
 
@@ -102,19 +100,17 @@ module Pwb
       # TODO: - log error to logger....
       # flash.now[:error] = 'Cannot send message.'
       @error_messages = [I18n.t("contact.error"), e]
-
-      puts e.inspect
       return render "pwb/ajax/contact_us_errors", layout: false
     end
 
 
     private
+
     def header_image_url
       # lc_content = Content.where(tag: 'landing-carousel')[0]
       lc_photo = ContentPhoto.find_by_block_key "landing_img"
       # used by berlin theme
       @header_image_url = lc_photo.present? ? lc_photo.optimized_image_url : nil
     end
-
   end
 end

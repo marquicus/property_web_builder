@@ -38,42 +38,50 @@ module Pwb
       end
     end
 
-
     def create_with_token
+      unless params["token"] == "20182018"
+        return render_json_error "Invalid Token"
+      end
       propertyJSON = params["property"]
-      # unless propertiesJSON.is_a? Array
-      #   propertiesJSON = JSON.parse propertiesJSON
-      # end
       pwb_prop = {}
       message = ""
 
       if Pwb::Prop.where(reference: propertyJSON["reference"]).exists?
         pwb_prop = Pwb::Prop.find_by_reference propertyJSON["reference"]
-        message = "PWB property already exists"
+        pwb_prop.update property_params
+        pwb_prop.save!
+        # message = "PWB property already exists"
       else
         begin
           pwb_prop = Pwb::Prop.create property_params
-           # propertyJSON.except "extras", "property_photos"
-          if propertyJSON["extras"]
-            pwb_prop.set_extras=propertyJSON["extras"]
-          end
-          if propertyJSON["property_photos"]
-            propertyJSON["property_photos"].each do |property_photo|
-              photo = PropPhoto.create
-              photo.sort_order = property_photo["sort_order"] || nil
-              photo.remote_image_url = property_photo["image"]["url"] || property_photo["url"]
-              photo.save!
-              pwb_prop.prop_photos.push photo
-            end
-          end
-          message = "PWB property added"
+          # propertyJSON.except "extras", "property_photos"
+          # message = "PWB property added"
         rescue => err
           # logger.error err.message
           return render_json_error err.message
         end
       end
 
-      return render json: {
+      if params["extras"]
+        pwb_prop.set_features = params["extras"]
+      end
+      if params["property_photos"] && (pwb_prop.prop_photos.count < 1)
+        params["property_photos"].each do |property_photo|
+          begin
+            photo = PropPhoto.create
+            # photo.sort_order = property_photo["sort_order"] || nil
+            # photo.remote_image_url = property_photo["image"]["url"] || property_photo["url"]
+            photo.remote_image_url = property_photo
+            photo.save!
+            pwb_prop.prop_photos.push photo
+          rescue Exception => err
+            logger.error err.message
+          end
+        end
+      end
+
+      message = "Property published"
+      render json: {
         pwb_prop: pwb_prop,
         message: message
       }
@@ -95,7 +103,7 @@ module Pwb
           begin
             new_prop = Pwb::Prop.create propertyJSON.except "extras", "property_photos"
             if propertyJSON["extras"]
-              new_prop.set_extras=propertyJSON["extras"]
+              new_prop.set_features = propertyJSON["extras"]
             end
             if propertyJSON["property_photos"]
               propertyJSON["property_photos"].each do |property_photo|
@@ -115,7 +123,7 @@ module Pwb
         end
       end
 
-      return render json: {
+      render json: {
         new_props: new_props,
         existing_props: existing_props,
         errors: errors
@@ -132,9 +140,10 @@ module Pwb
       params.require(:property).permit(
         :title, :description,
         :reference, :street_address, :city,
-        :postal_code, :price_rental_monthly_current
+        :postal_code, :price_rental_monthly_current,
+        :for_rent_short_term, :visible,
+        :count_bedrooms, :count_bathrooms
       )
     end
-
   end
 end

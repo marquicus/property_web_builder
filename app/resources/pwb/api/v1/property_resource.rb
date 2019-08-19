@@ -25,6 +25,8 @@ module Pwb
     attributes :title_ca, :description_ca
     attributes :title_pl, :description_pl
     attributes :title_ro, :description_ro
+    attributes :title_ko, :description_ko
+    attributes :title_bg, :description_bg
 
 
     attributes :area_unit, :photos, :property_photos, :extras
@@ -47,7 +49,7 @@ module Pwb
     def extras
       # override needed here as I have an extras has_many r/n on property
       # which is not yet in use..
-      return @model.get_extras
+      return @model.get_features
     end
 
     # TODO - fix client side so I don't have to use these legacy names

@@ -61,6 +61,9 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'zeus'
   gem 'json_spec'
+
+  gem 'rails-perftest'
+  gem 'ruby-prof', '0.15.9'
 end
 
 group :development do
@@ -74,9 +77,10 @@ end
 # /Users/me/.rbenv/versions/2.3.3/lib/ruby/gems/2.3.0/gems/localeapp-2.1.1/lib/localeapp/default_value_handler.rb
 # below overwrites I18n::Backend::Base above which causes seeder to break in specs
 # gem 'localeapp'
-# Use postgresql as the database for Active Record
-gem 'pg','~> 0.21.0'
 
 gem 'paloma', github: 'fredngo/paloma'
 # gem 'bourbon'
 gem 'property_web_scraper', github: 'RealEstateWebTools/property_web_scraper'
+
+gem 'sassc-rails'
+gem "omniauth-rails_csrf_protection"
