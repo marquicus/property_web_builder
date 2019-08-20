@@ -7,7 +7,7 @@ es:
   contact:
     emailSubject: Contacto desde su sitio web
     error: Lo sentimos, ha ocurrido un error.
-    success: Gracias por contactar con nosotros. En breve nos pondremos en contacto con usted.
+    success: Gracias por contactarnos. En breve nos pondremos en contacto con usted.
   contactUs: Contacta con nosotros
   contactUsPrompt: Rellena el siguiente formulario para contactar con nosotros
   devise:
