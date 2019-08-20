@@ -1,12 +1,12 @@
 ---
-- email: admin@example.com
+- email: administrador@consultorinmobiliario.mx
   password: pwb123456
   admin: true
   first_names: Admin
   last_names: Example
   skype: ae_skype
   phone_number_primary: 789 101
-- email: non_admin@example.com
+- email: invitado@consultorinmobiliario.mx
   password: pwb123456
   admin: false
   first_names: Nonadm
@@ -14,7 +14,7 @@
   skype: na_skype
   phone_number_primary: 123 456
 - email: webmaster@zetenk.com.mx
-  password: 4dm1nPWB
+  password: pwb123456
   admin: true
   first_names: Admin
   last_names: Zentek
